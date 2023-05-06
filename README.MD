@@ -63,3 +63,10 @@ server
     }
 }
 ```
+
+##fyc运行测试
+无论是gpt3.5  4.0的账号，生成的api_key,在访问api时 HttpRequest.post，都无法访问。提示ConnectException: Connection timed out: connect
+账号在官网上https://chat.openai.com/ 可以使用的，都是在vp加速环境下进行的。
+经官网查询，有如下这段话：
+ChatGPT Plus 订阅中是否包含 ChatGPT API？
+不，ChatGPT API 和 ChatGPT Plus 订阅是分开计费的。API 有自己的定价，可以在https://openai.com/pricing找到。ChatGPT Plus 订阅仅涵盖在 chat.openai.com 上的使用，每月收费 20 美元。
