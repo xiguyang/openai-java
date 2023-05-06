@@ -70,3 +70,5 @@ server
 经官网查询，有如下这段话：
 ChatGPT Plus 订阅中是否包含 ChatGPT API？
 不，ChatGPT API 和 ChatGPT Plus 订阅是分开计费的。API 有自己的定价，可以在https://openai.com/pricing找到。ChatGPT Plus 订阅仅涵盖在 chat.openai.com 上的使用，每月收费 20 美元。
+
+
