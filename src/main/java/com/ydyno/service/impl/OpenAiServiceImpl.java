@@ -126,6 +126,9 @@ public class OpenAiServiceImpl implements OpenAiService {
                 MapUtil.entry("temperature", openAiConfig.getTemperature()),
                 MapUtil.entry("messages", messages)
         );
+        log.info("HttpRequest\n post:{}\n header:{},{} \n body:{}",openAiConfig.getOpenaiApi(),
+                Header.CONTENT_TYPE.toString()+":application/json",Header.AUTHORIZATION.toString()+ ":Bearer " + apikey,
+                JSONUtil.toJsonStr(params));
         // 调用接口
         HttpResponse result;
         try {
@@ -137,6 +140,7 @@ public class OpenAiServiceImpl implements OpenAiService {
         }catch (Exception e){
             e.printStackTrace();
             webSocketServer.sendMessage("出错了：" + e.getMessage());
+            log.error("HttpResponse(Exception): {}",e.getMessage());
             return;
         }
         // 处理数据
